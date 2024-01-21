@@ -30,20 +30,7 @@ window.setInterval(draw, 1000)
 <template>
   <div class="container w-full h-full bg-bg absolute" style="max-width: 100%;">
 
-    <box class="box">
-      <!-- <div class="bg-0d w-28 ml-10 z-0 absolute mix" style="height: 94%; " />
-      <div class="bg-0d w-full h-1/8 z-10 absolute mix" style="top:87.5%" /> -->
-    </box>
-
     <canvas id="canvas" class="bg-bg h-full"></canvas>
 
   </div>
 </template>
-
-<style scoped>
-.mix {}
-
-.box {
-  isolation: isolate;
-}
-</style>
