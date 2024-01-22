@@ -2,6 +2,8 @@
 import { onMounted, ref } from "vue";
 import AboutView from "./views/AboutView.vue";
 import HomeView from "./views/HomeView.vue";
+import Preview from "./views/PreviewView.vue";
+import PastPresentations from "./views/PastPresentationsView.vue";
 import AhaLogo from '@/components/AhaLogo.vue'
 import OutLine from '@/components/OutlineC.vue'
 
@@ -57,10 +59,10 @@ onMounted(() => {
       <HomeView />
     </section>
     <section id="preview">
-      <img src="https://cdn.seovx.com/d/?mom=302">
+      <Preview />
     </section>
     <section id="pastPresentations">
-      <img src="https://cdn.seovx.com/d/?mom=302">
+      <PastPresentations />
     </section>
     <section id="aboutView">
       <AboutView />
