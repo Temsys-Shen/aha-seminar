@@ -3,7 +3,7 @@ import { onMounted, ref } from "vue";
 import AboutView from "./views/AboutView.vue";
 import HomeView from "./views/HomeView.vue";
 import Preview from "./views/PreviewView.vue";
-import PastPresentations from "./views/PastPresentationsView.vue";
+import PastPresentations from "./views/PastPresentations.vue";
 import AhaLogo from '@/components/AhaLogo.vue'
 import OutLine from '@/components/OutlineC.vue'
 
@@ -49,8 +49,6 @@ onMounted(() => {
     });
   });
 })
-
-
 </script>
 
 <template>
