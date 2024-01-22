@@ -22,6 +22,11 @@ class Rand {
   }
 }
 
+// 实时更新鼠标x坐标
+let mouseX = 0
+document.addEventListener("mousemove", (event) => {
+  mouseX = event.clientX
+})
 const randX = new Rand(-2, 2, 0.5)
 const randY = new Rand(-5, 5, 1)
 
@@ -91,16 +96,37 @@ function draw() {
   ctx.arc(w - x_offset, 0.5 * h, r, 0, 2 * Math.PI)
   ctx.fill()
   //#endregion
+  //#region 画线
+  ctx.globalCompositeOperation = "xor"
+  ctx.beginPath()
+  ctx.moveTo(mouseX + 1, 0)
+  ctx.lineTo(mouseX + 1, h)
+  ctx.stroke()
+  //#endregion
 }
-window.setInterval(draw, 16.66)
+window.setInterval(draw, 20)
 
 </script>
 
 <template>
   <div class="container w-full h-full bg-bg absolute" style="max-width: 100%;">
-    <div class="absolute left-9" style="top: 4%;">
-      <AhaLogo />
+    <AhaLogo class="absolute left-9" style="top: 4%;" />
+    <div id="slogan">
+      Aha！在这里，你将找到志同道合的伙伴，一起探索未知的世界。
     </div>
     <canvas id="canvas" class="bg-bg w-full h-full"></canvas>
   </div>
 </template>
+
+<style scoped>
+#slogan {
+  @apply text-0d select-none absolute left-96;
+  font-size: 24px;
+  font-weight: 350;
+  font-family: 'Noto Sans SC';
+  top: 50%;
+  transform: translateY(27px);
+  max-width: 315px;
+  line-height: 36px;
+}
+</style>
