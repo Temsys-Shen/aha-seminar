@@ -8,12 +8,12 @@ export default {
     extend: {
       colors: {
         '0d': '#0D0D0D',
-        'bg': '#EDEDED'
+        'bg': '#EDEDED',
+        'c': '#25A1D2',
+        'm': '#CF2485',
+        'y': '#E8DF31',
+        'k': '#221E1F',
       },
-      height: {
-        "1/8": "12.5%",
-        "7/8": "87.5%",
-      }
     },
   },
   plugins: [],
