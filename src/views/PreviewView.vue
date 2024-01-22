@@ -10,7 +10,8 @@
 <style>
 .texture {
     position: absolute;
-
+    bottom: -10vh;
+    left: -230px;
     transform: rotate(-90.00deg);
     opacity: 0.13;
     color: rgb(13, 13, 13);
