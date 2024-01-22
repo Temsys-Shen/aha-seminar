@@ -7,7 +7,17 @@
 }
 
 *::-webkit-scrollbar-track {
-  background: linear-gradient(180deg, #25a1d2 0%, #cf2485 25%, #e8df31 75%, #221e1f 100%);
+  background: linear-gradient(
+    180deg,
+    #25a1d2 0%,
+    #25a1d2 24.9%,
+    #cf2485 25%,
+    #cf2485 49.9%,
+    #e8df31 50%,
+    #e8df31 74.9%,
+    #221e1f 75%,
+    #221e1f 100%
+  );
   border-radius: 2px;
 }
 
@@ -15,7 +25,3 @@
   background: #ededed;
   border-radius: 10px;
 }
-/* 
-*::-webkit-scrollbar-thumb:hover {
-    background: #40a0ff;
-} */

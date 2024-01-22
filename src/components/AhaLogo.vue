@@ -1,5 +1,5 @@
 <template>
-    <div class="m-4 pointer-events-none select-none">
+    <div class="pt-16 px-4 pb-4 pointer-events-none select-none bg-0d" style="background-blend-mode: darken;">
         <div class="flex">
             <div class="tile bg-c"></div>
             <div class="tile bg-m"></div>
