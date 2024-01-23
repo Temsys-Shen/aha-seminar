@@ -70,7 +70,7 @@ onMounted(() => {
   <div id="season">
     {{ new Date().getFullYear() }} Q{{ Math.floor((new Date().getMonth() + 3) / 3) }}
   </div>
-  <OutLine class="fixed right-0 top-1/2 -translate-y-2/3 m-4" :items="items" :currentId="currentView" :ratio="ratio" />
+  <OutLine id="outline" :items="items" :currentId="currentView" :ratio="ratio" />
 </template>
 
 <style scoped>
@@ -92,11 +92,15 @@ section {
 }
 
 #season {
-  @apply fixed top-12 left-1/2 pointer-events-none;
+  @apply fixed top-12 left-1/2 pointer-events-none select-none;
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
   color: #ededed;
   mix-blend-mode: exclusion;
+}
+
+#outline {
+  @apply fixed right-0 top-1/2 -translate-y-2/3 m-4;
 }
 </style>

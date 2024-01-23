@@ -12,7 +12,7 @@
     </div>
 </template>
 
-<style>
+<style scoped>
 .tile {
     width: 15px;
     height: 2px;

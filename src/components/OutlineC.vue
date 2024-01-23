@@ -17,7 +17,7 @@ defineProps({
 </script>
 
 <template>
-    <div class="flex flex-col items-end gap-2">
+    <div class="flex flex-col items-end gap-2 pointer-events-none select-none">
         <div v-for="(i, j) in items" :key="i.id" class="flex items-center h-4">
             <div v-if="i.id == currentId" class="content-label">{{ i.name }}</div>
             <div class="rounded-lg bg-black ml-2" style="min-width: 6px;height:6px;"
