@@ -1,10 +1,11 @@
 <script setup>
 import { ref } from "vue";
 import PreviewItem from "@/components/PreviewItem.vue";
+import CircleDecoration from "@/components/CircleDecoration.vue";
 
 const year = ref(2077);
-const issue = ref(1);
-
+const issue = ref(12);
+const themeColor = `hsl(${(year.value * 3 + issue.value * 691) * 991 % 360}, 100%, 50%)`
 </script>
 
 <template>
@@ -14,10 +15,10 @@ const issue = ref(1);
             <div>OUR NEW</div>
             <div>EVENT</div>
         </div>
-        <canvas />
-        <div class="absolute -rotate-90 right-8 bottom-1/2 text-bg font-black translate-x-1/2 -translate-y-3/4"
+        <CircleDecoration :themeColor="themeColor" />
+        <div class="absolute -rotate-90 right-8 bottom-1/2 text-bg font-black translate-x-1/2 -translate-y-3/4 pointer-events-none select-none"
             style="font-size: 144px;font-family: Noto Sans SC;">PREVIEW</div>
-        <div class="absolute text-0d font-black right-0 bottom-0"
+        <div class="absolute text-0d font-black right-0 bottom-0 pointer-events-none select-none"
             style="font-size: 240px;line-height: 302px;font-family: Outfit;">
             {{ issue.toString().padStart(2, '0') }}
         </div>
