@@ -13,6 +13,9 @@ function draw(canvas, color) {
     const ctx = canvas.getContext("2d");
     const w = window.innerWidth;
     const h = window.innerHeight;
+    if (h * window.devicePixelRatio == canvas.height && w * window.devicePixelRatio == canvas.width) {
+        return
+    }
     canvas.height = h * window.devicePixelRatio;
     canvas.width = w * window.devicePixelRatio;
     ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
