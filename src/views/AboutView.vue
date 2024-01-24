@@ -9,7 +9,8 @@ const currentIntroduction = ref(0);
 const large = computed(() => introductions[currentIntroduction.value].large);
 const small = computed(() => introductions[currentIntroduction.value].small);
 const chinese = computed(() => introductions[currentIntroduction.value].chinese);
-const content = computed(() => introductions[currentIntroduction.value].content);
+const contents = computed(() => introductions[currentIntroduction.value].content.split('\n'));
+
 // 循环切换介绍
 function nextIntroduction() {
   currentIntroduction.value = (currentIntroduction.value + 1) % introductions.length;
@@ -65,7 +66,9 @@ function prevIntroduction() {
       <div class="flex my-12 grow text-2xl font-light items-center" style="width: 50vw;">
         <button class="switchButton" @click="prevIntroduction">&lt;</button>
         <Transition name="slide-fade">
-          <div v-if="show" class="grow mx-6 text-justify">{{ content }}</div>
+          <div v-if="show">
+            <div v-for="p in contents" class="grow mx-6 text-center" :key="p">{{ p }}</div>
+          </div>
         </Transition>
         <button class="switchButton" @click="nextIntroduction">&gt;</button>
       </div>
