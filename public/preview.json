@@ -1,0 +1,50 @@
+{
+  "year": "2077",
+  "issue": "12",
+  "presentations1": [
+    {
+      "half": "上半场",
+      "session": "1",
+      "author": "Hapenia",
+      "title": "Wordle之谜：挖掘数字分数和解决方案单词的秘密",
+      "abstract": "Wordle是《纽约时报》目前每天提供的一个流行的谜题。简单的规则和聪明的传播特性有助于它的流行。在本文中，我们分别建立了两个预测Twi- tter报告数区间和结果分布的预测模型，并建立了一个分类求解词难度的模型。"
+    },
+    {
+      "half": "上半场",
+      "session": "2",
+      "author": "Hapenia",
+      "title": "Wordle之谜：挖掘数字分数和解决方案单词的秘密",
+      "abstract": "Aha"
+    },
+    {
+      "half": "上半场",
+      "session": "3",
+      "author": "Hapenia",
+      "title": "Wordle之谜：挖掘数字分数和解决方案单词的秘密",
+      "abstract": "Aha"
+    }
+  ],
+  "presentations2": [
+    {
+      "half": "下半场",
+      "session": "1",
+      "author": "Hapenia",
+      "title": "Wordle之谜：挖掘数字分数和解决方案单词的秘密",
+      "abstract": "Aha"
+    },
+    {
+      "half": "下半场",
+      "session": "2",
+      "author": "Hapenia",
+      "title": "Wordle之谜：挖掘数字分数和解决方案单词的秘密",
+      "abstract": "Aha"
+    },
+    {
+      "half": "下半场",
+      "session": "3",
+      "author": "Hapenia",
+      "title": "Wordle之谜：挖掘数字分数和解决方案单词的秘密",
+      "abstract": "Aha"
+    }
+  ]
+}

@@ -169,7 +169,7 @@ window.setInterval(draw, 20)
 
 #about-us {
   @apply text-0d absolute right-10 top-10 select-none;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 700;
   font-family: 'Roboto Condensed';
   line-height: 16px;

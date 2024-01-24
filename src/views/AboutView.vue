@@ -1,22 +1,10 @@
 <script setup>
 import CircleDecoration from '@/components/CircleDecoration.vue';
+import aboutContent from '@/assets/aboutContent.json';
 import { computed, ref } from 'vue';
 
 const show = ref(true);
-const introductions = [
-  {
-    large: "About",
-    small: "us",
-    chinese: "关于我们",
-    content: "Aha研讨室是面向中国大学生的多元化交流平台，旨在促进大学生之间的生活交流、信息分享和学术启蒙。平台交流范围涵盖自然科学、人文科学、社会科学等多个领域。研讨会每两周举办一次，由学生或特邀嘉宾进行分享，分享结束后可进行自由讨论。"
-  },
-  {
-    large: "Outlook",
-    small: "dev",
-    chinese: "发展规划",
-    content: "Aha研讨室将以吉林大学为起点，逐步扩展到全国范围。在讨论范围上，将从自然科学、人文科学、社会科学等多个领域逐渐拓展到职业发展、创业、社会实践等相关的主题，并开展跨学科、跨领域的研讨会和国际合作交流，为大学生提供更广阔的交流学习平台。"
-  }
-]
+const introductions = aboutContent
 const currentIntroduction = ref(0);
 const large = computed(() => introductions[currentIntroduction.value].large);
 const small = computed(() => introductions[currentIntroduction.value].small);
@@ -106,7 +94,7 @@ function prevIntroduction() {
 }
 
 .switchButton {
-  @apply text-4xl drop-shadow-lg font-mono;
+  @apply text-4xl drop-shadow-lg font-mono select-none;
 }
 
 /* 按钮摇摆 */

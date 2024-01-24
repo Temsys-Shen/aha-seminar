@@ -1,11 +1,21 @@
 <script setup>
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 import PreviewItem from "@/components/PreviewItem.vue";
 import CircleDecoration from "@/components/CircleDecoration.vue";
 
 const year = ref(2077);
 const issue = ref(12);
+const presentations1 = ref([]);
+const presentations2 = ref([]);
 const themeColor = `hsl(${(year.value * 3 + issue.value * 691) * 991 % 360}, 100%, 50%)`
+
+onMounted(async () => {
+    const data = await fetch("preview.json").then(res => res.json()).catch(() => []);
+    year.value = data.year;
+    issue.value = data.issue;
+    presentations1.value = data.presentations1;
+    presentations2.value = data.presentations2;
+});
 </script>
 
 <template>
@@ -40,20 +50,14 @@ const themeColor = `hsl(${(year.value * 3 + issue.value * 691) * 991 % 360}, 100
             </div>
             <div class="flex">
                 <div class="flex flex-col" style="width: 25vw;">
-                    <PreviewItem half="上半场" session="1" author="Hapenia" title="Wordle之谜：挖掘数字分数和解决方案单词的秘密" abstract="Aha"
-                        time="Aha" />
-                    <PreviewItem half="上半场" session="2" author="Hapenia" title="Wordle之谜：挖掘数字分数和解决方案单词的秘密" abstract="Aha"
-                        time="Aha" />
-                    <PreviewItem half="上半场" session="3" author="Hapenia" title="Wordle之谜：挖掘数字分数和解决方案单词的秘密" abstract="Aha"
-                        time="Aha" />
+                    <PreviewItem v-for="item in presentations1" :half="item.half" :session="item.session"
+                        :author="item.author" :title="item.title" :abstract="item.abstract" :time="item.time"
+                        :key="item.title + item.author" />
                 </div>
                 <div class="flex flex-col w-1/4 ml-4" style="width: 25vw;">
-                    <PreviewItem half="下半场" session="1" author="Hapenia" title="Wordle之谜：挖掘数字分数和解决方案单词的秘密" abstract="Aha"
-                        time="Aha" />
-                    <PreviewItem half="下半场" session="2" author="Hapenia" title="Wordle之谜：挖掘数字分数和解决方案单词的秘密" abstract="Aha"
-                        time="Aha" />
-                    <PreviewItem half="下半场" session="3" author="Hapenia" title="Wordle之谜：挖掘数字分数和解决方案单词的秘密" abstract="Aha"
-                        time="Aha" />
+                    <PreviewItem v-for="item in presentations2" :half="item.half" :session="item.session"
+                        :author="item.author" :title="item.title" :abstract="item.abstract" :time="item.time"
+                        :key="item.title + item.author" />
                 </div>
             </div>
 
